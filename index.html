@@ -1,27 +1,114 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>Photo Album</title>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link type="text/css" rel="stylesheet" href="styles.css"/>
-    <meta charset="utf-8">
-    <title></title>
+    <script type="text/html" id="homeAlbumTmpl">
+      <article class="hp" data-index="">
+        <h3><img src="<%= photo %>"></h3>
+        <li><%= tag %></li>
+      </article>
+    </script>
+
+    <script type="text/html" id="singleTmpl">
+      <article class="tp" data-index="">
+        <h3><img src="<%= photo1 %>"></h3>
+        <h3><img src="<%= photo2 %>"></h3>
+        <h3><img src="<%= photo3 %>"></h3>
+        <li><%= tag %></li>
+      </article>
+    </script>
   </head>
   <body>
     <header>
+        <h1>Guthrie Family Photos</h1>
+      </nav>
     </header>
-    <div class="main">
-      <div class="rightSide">
-      </div>
-
-      <aside class="leftSide">
+      <aside>
+          <h3>Album Selector</h3>
+            <li><a href="" rel="allAlbums">Home</a></li>
+            <li><a href="" rel="mason">Mason</a></li>
+            <li><a href="" rel="mia">Mia</a></li>
+            <li><a href="" rel="bothKids">Both Kids</a></li>
+            <li><a href="" rel="parents">Parents</a></li>
+            <li><a href="" rel="dogs">Dogs</a></li>
+            <li><a href="" rel="family">Family</a></li>
       </aside>
+      <div class="swap">
+        <section class="allAlbums active-section">
+        <!-- <h2>All Albums</h2>
+          <ul>
+            <li id="mason1"><a href="#"><img src=""></a></li>
+            <img id="mia1" src="#">
+            <img id="bothKids1" src="#">
+            <img id="parents1" src="#">
+            <img id="dogs1" src="#">
+            <img id="family1" src="#">
+          </ul> -->
+        </section>
+        <section class="thumbs">
+        </section>
+        <section class="mason">
+          <ul>
+            <h2>My little man<h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
+        <section class="mia">
+          <ul>
+            <h2>Mia has taken over</h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
+        <section class="bothKids">
+          <ul>
+            <h2>Just the two of them</h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
+        <section class="parents">
+          <ul>
+            <h2>Rebecca and Dustin</h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
+        <section class="dogs">
+          <ul>
+            <h2>Havana - Tucker - Gaby</h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
+        <section class="family">
+          <ul>
+            <h2>The Grandparents</h2>
+            <img src="">
+            <img src="">
+            <img src="">
+          </ul>
+        </section>
     </div>
     <footer>
+      <li id="cright">&copy; Guthrie Endeavors, Inc.</li>
+      <li id="logo">TIY 2015</li>
     </footer>
     <!-- JS FILES -->
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="albums.js"></script>
+    <!-- <script src="albums.js"></script> -->
+    <script src="home.js"></script>
+    <script src="thumbnails.js"></script>
     <script src="main.js"></script>
 
   </body>
