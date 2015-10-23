@@ -22,7 +22,7 @@ _.each(thumbnails, function (currVal, idx, arr) {
     singleHTML += singleTemplate(currVal);
     // console.log("homeAlbumHTML: ", homeAlbumHTML);
 });
-$('.thumbs').html(singleHTML);
+// $('.thumbs').html(singleHTML);
 
 $('aside li > a').on('click', function (event) {
   event.preventDefault();
@@ -30,13 +30,18 @@ $('aside li > a').on('click', function (event) {
   // console.log("javascript", $(this));
       threePhotos = thumbnails.filter(function(curVal) {
         return curVal.name === clickedSection;
-    }) .forEach(function(threePhotos) {
-      return threePhotos += singleHTML;
+    });
+      threePhotos.forEach(function(curVal) {
+      singleHTML += singleTemplate(curVal);
+    });
       //Stuck with what to do on this return
       //I need to somehow take these 3 photos and inject them into
       //singleTmpl as my info to display
+      $('.thumbs').html(singleHTML);
 });
-console.log(threePhotos);
+// console.log(threePhotos);
+
+
 
 
 
@@ -58,4 +63,4 @@ console.log(threePhotos);
 
 
 
-});
+// });
