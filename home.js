@@ -10,18 +10,18 @@ var home = [
 },
 
 {
-  tag: "bothKids",
-  photo: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12049498_10206027925311430_5849138708806324777_n.jpg?oh=7c6e5146c34ec6255f8a954938b25300&oe=5686EA12"
+  tag: "both kids",
+  photo: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtl1/v/t1.0-9/12079098_10206170576517621_2624198575783319335_n.jpg?oh=903b8db1203498a407be70d2aa859483&oe=5684F15A"
 },
 
 {
-  tag: "parents",
+  tag: "rebecca & dustin",
   photo: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpf1/t31.0-8/135642_1684875115962_2145627_o.jpg"
 },
 
 {
   tag: "dogs",
-  photo: "https://im1.shutterfly.com/media/47a2d901b3127ccef0fd92c6568e00000030O00AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D0300502187779519904553090731459.JPG/ps%3D50/r%3D0/rx%3D550/ry%3D400/"
+  photo: "https://im1.shutterfly.com/media/47a3ce07b3127ccef420ca02833700000030O10AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D00502187779520131026150657522.JPG/ps%3D50/r%3D1/rx%3D550/ry%3D400/"
 },
 
 {
