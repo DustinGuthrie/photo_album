@@ -21,7 +21,7 @@ var home = [
 
 {
   tag: "dogs",
-  photo: "https://im1.shutterfly.com/media/47a3ce07b3127ccef420ca02833700000030O10AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D00502187779520131026150657522.JPG/ps%3D50/r%3D1/rx%3D550/ry%3D400/"
+  photo: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfp1/t31.0-8/12132419_169737156704812_7587389426919921745_o.jpg"
 },
 
 {

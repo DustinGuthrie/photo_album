@@ -33,17 +33,17 @@ var thumbnails = [
 
 {
   tag: "Havana - Tucker - Gaby",
-  photo1: "https://im1.shutterfly.com/media/47a2d901b3127ccef0fd92c6568e00000030O00AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D0300502187779519904553090731459.JPG/ps%3D50/r%3D0/rx%3D550/ry%3D400/",
-  photo2: "https://im1.shutterfly.com/media/47a3ce07b3127ccef420ca02833700000030O10AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D00502187779520131026150657522.JPG/ps%3D50/r%3D1/rx%3D550/ry%3D400/",
-  photo3: "https://im1.shutterfly.com/media/47a2d901b3127ccef0fc912cb78100000030O00AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D0300502187779519902718090548414.JPG/ps%3D50/r%3D0/rx%3D550/ry%3D400/",
+  photo1: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpf1/t31.0-8/12028823_169737160038145_5000053047469891906_o.jpg",
+  photo2: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xft1/t31.0-8/12045530_169737200038141_6390417327740586062_o.jpg",
+  photo3: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpt1/t31.0-8/12029843_169737210038140_5458783237031698574_o.jpg",
   name: '.dogs'
 },
 
 {
   tag: "The extended Family",
-  photo1: "https://im1.shutterfly.com/media/47a2d901b3127ccef0fd92c6568e00000030O00AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D0300502187779519904553090731459.JPG/ps%3D50/r%3D0/rx%3D550/ry%3D400/",
-  photo2: "https://im1.shutterfly.com/media/47a3ce07b3127ccef420ca02833700000030O10AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D00502187779520131026150657522.JPG/ps%3D50/r%3D1/rx%3D550/ry%3D400/",
-  photo3: "https://im1.shutterfly.com/media/47a2d901b3127ccef0fc912cb78100000030O00AauW7du4YsmoPbz4Y/cC/f%3D0/ls%3D0300502187779519902718090548414.JPG/ps%3D50/r%3D0/rx%3D550/ry%3D400/",
+  photo1: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10955795_10204555273416053_3407059117322099649_n.jpg?oh=cb132c13a788c0e4a6b1011c21688e6e&oe=56C3761E",
+  photo2: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/1479381_592134497501656_370655014_n.jpg?oh=2248d7d727c89ae87d4304c86825aba5&oe=56B7011B",
+  photo3: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/551822_2402104308708_133624464_n.jpg?oh=caad2393c0a7b106b21741e5369c4bfd&oe=56B9DA39",
   name: '.family'
 }
 ];
