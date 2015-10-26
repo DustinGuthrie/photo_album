@@ -21,21 +21,37 @@ $('.allAlbums').html(homeAlbumHTML);
 //*******************************************************
 //*****************BELOW IS FOR ALBUM SELECTOR***********
 
-var singleTemplate = _.template($('#singleTmpl').html());
-
-_.each(thumbnails, function (currVal, idx, arr) {
-    // console.log(currVal);
-    singleHTML += singleTemplate(currVal);
-});
-$('.thumbs').html(singleHTML);
+// var singleTemplate = _.template($('#singleTmpl').html());
+//
+// _.each(thumbnails, function (currVal, idx, arr) {
+//     console.log(currVal);
+//     if(currVal.name === clickedSection) {
+//       singleHTML += singleTemplate(currVal);
+//     } else {
+//       return;
+//     }
+//
+//
+// individualAlbum = thumbnails.filter(function(currItem) {
+//   if(currItem.name === clickedSection){
+//     return currItem;
+//   } else {
+//     return;
+//   }
+// });
+// individualAlbum.forEach(function (currVal, idx, arr) {
+//     singleHTML += singleTemplate(currVal);
+// });
+// $('.thumbs').html(singleHTML);
 
 //**********BELOW IS FOR THE CLICK AND SHOW/HIDE*********
 
-$('aside > a').on('click', function (event) {
+$('aside > li a').on('click', function (event) {
     event.preventDefault();
     clickedSection = "." + $(this).attr('rel');
-    console.log("javascript", $(this));
-    console.log(clickedSection);
+    // console.log(event.target);
+    // console.log("javascript", $(this));
+    // console.log(clickedSection);
 
 
     // individualAlbum = thumbnails.filter(function(currVal) {
@@ -44,11 +60,48 @@ $('aside > a').on('click', function (event) {
         // if(clickedSection === currVal.name){
         //   console.log(currVal);
       //   }
-      $(clickedSection).addClass('active-section');
-      $(clickedSection).siblings('section').removeClass('active-section');
+      if(clickedSection === '.allAlbums') {
+      $('.allAlbums').addClass('active-section');
+      $('.thumbs').removeClass('active-section');
+    } else {
+      $('.thumbs').addClass('active-section');
+      $('.allAlbums').removeClass('active-section');
+    }
       // event.preventDefault();
 
+      // });var singleTemplate = _.template($('#singleTmpl').html());
+      //
+      // _.each(thumbnails, function (currVal, idx, arr) {
+      //     console.log(currVal);
+          // if(currVal.name === clickedSection) {
+          //   singleHTML += singleTemplate(currVal);
+          // } else {
+          //   return;
+          // }
+      //     singleHTML += singleTemplate(currVal);
+      // });
+      // $('.thumbs').html(singleHTML);
+
+      // _.each(home, function (currVal, idx, arr) {
+      //     homeAlbumHTML += homeAlbumTemplate(currVal);
+      // });
+      // $('.allAlbums').html(homeAlbumHTML);
+      //
+      //*******************************************************
+      //*****************BELOW IS FOR ALBUM SELECTOR***********
+
+      var singleTemplate = _.template($('#singleTmpl').html());
+
+      _.each(thumbnails, function (currVal, idx, arr) {
+          // console.log(currVal);
+          if(currVal.name === clickedSection) {
+            singleHTML += singleTemplate(currVal);
+          } else {
+            return;
+          }
       });
+      $('.thumbs').html(singleHTML);
+
           // return singleHTML += singleTemplate(currVal);
         //   return currVal;
         // } else {
@@ -56,12 +109,9 @@ $('aside > a').on('click', function (event) {
         // }
         //
       //   return _.contains(currVal.name, clickedSection);
-      // });
 
       // individualAlbum.forEach(function(currVal, idx, arr) {
       //   singleHTML += singleTemplate(currVal);
-      // });
-
 
         // return currVal.name === clickedSection;
     // }) .forEach(function(individualAlbum) {
@@ -73,16 +123,16 @@ $('aside > a').on('click', function (event) {
 
         // individualAlbum.forEach(function(currVal){
         // singleHTML += singleTemplate(currVal);
-        // });
+        });
 
-        //$('thumbs').html(singleHTML);
+        // $('.thumbs').html(singleHTML);
 // });
 // $('.thumbs').html(singleHTML);
 // console.log(threePhotos);
   // console.log(clickedSection);
   // $(clickedSection).addClass('active-section');
   // $(clickedSection).siblings('section').removeClass('active-section');
-// });
+// $('.allAlbums').html(homeAlbumHTML);
 
 
 });

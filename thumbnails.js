@@ -4,7 +4,7 @@ var thumbnails = [
   photo1: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/12043166_10206054785142909_1460205498720307819_n.jpg?oh=1fc6e8d43d74705a0b92b6a0ffe6ff2a&oe=5687CDC3",
   photo2: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/12115442_10206170221188738_7603298286209301205_n.jpg?oh=07aa565c06bc4766884bb2b4af0d3f4c&oe=56C9CC7A",
   photo3: "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xap1/t31.0-8/12028842_694632349581_6545681649394589171_o.jpg",
-  name: '.mason'
+  name: ".mason"
 },
 
 {
