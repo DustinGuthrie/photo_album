@@ -1,7 +1,7 @@
 var clickedSection = "";
 var individualAlbum = "";
 var homeAlbumHTML = "";
-var singleHTML = "";
+// var singleHTML = "";
 
 
 
@@ -64,6 +64,7 @@ $('aside > li a').on('click', function (event) {
       $('.allAlbums').addClass('active-section');
       $('.thumbs').removeClass('active-section');
     } else {
+
       $('.thumbs').addClass('active-section');
       $('.allAlbums').removeClass('active-section');
     }
@@ -94,13 +95,17 @@ $('aside > li a').on('click', function (event) {
 
       _.each(thumbnails, function (currVal, idx, arr) {
           // console.log(currVal);
+          var singleHTML = "";
+
           if(currVal.name === clickedSection) {
             singleHTML += singleTemplate(currVal);
           } else {
             return;
           }
+          $('.thumbs').html(singleHTML);
+
       });
-      $('.thumbs').html(singleHTML);
+      // $('.thumbs').html(singleHTML);
 
           // return singleHTML += singleTemplate(currVal);
         //   return currVal;
