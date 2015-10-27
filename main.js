@@ -1,96 +1,75 @@
 var clickedSection = "";
 var individualAlbum = "";
 var homeAlbumHTML = "";
-// var singleHTML = "";
-
 
 
 $(document).ready(function () {
+//****Refactor starts here******
+//     albumPage.init();
+//   });
+//
+//   var albumPage = {
+//     init: function(){
+//       albumPage.styling();
+//       albumPage.events();
+//     },
+//     events: function() {
+//     $('.allAlbums').on('click',function (event) {
+//       $(this).closest('article').remove();
+//     });
+//     $('aside > li a').on('click', function (event) {
+//         event.preventDefault();
+//         var element = this;
+//         albumPage.showActiveSection(element);
+//     });
+//   },
+//   styling: function(){
+//     albumPage.loadAlbums();
+//   },
+//   loadAlbums: function() {
+//     var homeAlbumTmpl = "";
+//     _.each(home, function (currVal, idx, arr) {
+//         homeAlbumHTML += albumPage.loadTemplate('homeAlbumTmpl', currVal);
+//       });
+//       $('.allAlbums').html(homeAlbumHTML);
+//   },
+//   showActiveSection: function(clickedThingy) {
+//    var clickedSection = "." + $(clickedThingy).attr('rel');
+//    $(clickedSection).addClass('active-section');
+//    $(clickedSection).siblings('section').removeClass('active-section');
+//  },
+//  getTemplate: function(name) {
+//   return _.template(templates[name]);
+// },
+// loadTemplate: function(name, val) {
+//   var tmpl = bitterPage.getTemplate(name);
+//   return tmpl(val);
+// },
+// };
+//***Refactor Ends here...but not working
 
 $('section').first().addClass('active-section');
 //**************BELOW IS FOR THE HOME PAGE****************
 
 var homeAlbumTemplate = _.template($('#homeAlbumTmpl').html());
-// console.log("home album template: ", homeAlbumTemplate);
-
 _.each(home, function (currVal, idx, arr) {
     homeAlbumHTML += homeAlbumTemplate(currVal);
 });
 $('.allAlbums').html(homeAlbumHTML);
 
-//*******************************************************
-//*****************BELOW IS FOR ALBUM SELECTOR***********
-
-// var singleTemplate = _.template($('#singleTmpl').html());
-//
-// _.each(thumbnails, function (currVal, idx, arr) {
-//     console.log(currVal);
-//     if(currVal.name === clickedSection) {
-//       singleHTML += singleTemplate(currVal);
-//     } else {
-//       return;
-//     }
-//
-//
-// individualAlbum = thumbnails.filter(function(currItem) {
-//   if(currItem.name === clickedSection){
-//     return currItem;
-//   } else {
-//     return;
-//   }
-// });
-// individualAlbum.forEach(function (currVal, idx, arr) {
-//     singleHTML += singleTemplate(currVal);
-// });
-// $('.thumbs').html(singleHTML);
-
-//**********BELOW IS FOR THE CLICK AND SHOW/HIDE*********
-
+//**********BELOW IS FOR THE NAV CLICK AND SHOW/HIDE*********
 $('aside > li a').on('click', function (event) {
     event.preventDefault();
     clickedSection = "." + $(this).attr('rel');
-    // console.log(event.target);
-    // console.log("javascript", $(this));
-    // console.log(clickedSection);
-
-
-    // individualAlbum = thumbnails.filter(function(currVal) {
-
-        // console.log(curVal.name === clickedSection);
-        // if(clickedSection === currVal.name){
-        //   console.log(currVal);
-      //   }
       if(clickedSection === '.allAlbums') {
       $('.allAlbums').addClass('active-section');
       $('.thumbs').removeClass('active-section');
     } else {
-
       $('.thumbs').addClass('active-section');
       $('.allAlbums').removeClass('active-section');
     }
-      // event.preventDefault();
 
-      // });var singleTemplate = _.template($('#singleTmpl').html());
-      //
-      // _.each(thumbnails, function (currVal, idx, arr) {
-      //     console.log(currVal);
-          // if(currVal.name === clickedSection) {
-          //   singleHTML += singleTemplate(currVal);
-          // } else {
-          //   return;
-          // }
-      //     singleHTML += singleTemplate(currVal);
-      // });
-      // $('.thumbs').html(singleHTML);
-
-      // _.each(home, function (currVal, idx, arr) {
-      //     homeAlbumHTML += homeAlbumTemplate(currVal);
-      // });
-      // $('.allAlbums').html(homeAlbumHTML);
-      //
-      //*******************************************************
-      //*****************BELOW IS FOR ALBUM SELECTOR***********
-
+//****Below is for the individual albums*********//
       var singleTemplate = _.template($('#singleTmpl').html());
 
       _.each(thumbnails, function (currVal, idx, arr) {
@@ -105,39 +84,44 @@ $('aside > li a').on('click', function (event) {
           $('.thumbs').html(singleHTML);
 
       });
-      // $('.thumbs').html(singleHTML);
+  });
+      $('section img').on('click', function (event) {
+          event.preventDefault();
+          clickedSection = $(this).attr('alt');
+          var singleTemplate = _.template($('#singleTmpl').html());
 
-          // return singleHTML += singleTemplate(currVal);
-        //   return currVal;
-        // } else {
-        //   return;
-        // }
-        //
-      //   return _.contains(currVal.name, clickedSection);
+          _.each(thumbnails, function (currVal, idx, arr) {
+              var singleHTML = "";
+              if(currVal.name === clickedSection) {
+                singleHTML += singleTemplate(currVal);
+              } else {
+                return;
+              }
+          $('.thumbs').addClass('active-section');
+          $('.allAlbums').removeClass('active-section');
+          $('.thumbs').html(singleHTML);
 
-      // individualAlbum.forEach(function(currVal, idx, arr) {
-      //   singleHTML += singleTemplate(currVal);
-
-        // return currVal.name === clickedSection;
-    // }) .forEach(function(individualAlbum) {
-      // return singleHTML += singleTemplate(individualAlbum);
-      //Stuck with what to do on this return
-      //I need to somehow take these 3 photos and inject them into
-      //singleTmpl as my info to display
-      //MAYBE USE THIS BELOW - added Friday?
-
-        // individualAlbum.forEach(function(currVal){
-        // singleHTML += singleTemplate(currVal);
         });
+            });
 
-        // $('.thumbs').html(singleHTML);
-// });
-// $('.thumbs').html(singleHTML);
-// console.log(threePhotos);
-  // console.log(clickedSection);
-  // $(clickedSection).addClass('active-section');
-  // $(clickedSection).siblings('section').removeClass('active-section');
-// $('.allAlbums').html(homeAlbumHTML);
 
+//*****image zoom From StackOverflow Gaby aka G. Petrioli********
+//****made some modifications
+$('.thumbs img').on('click', function (event) {
+            var scale = 150/100;
+            var pos = $(this).offset();
+            var clickX = event.pageX - pos.left;
+            var clickY = event.pageY - pos.top;
+            var container = $(this).parent().get(0);
+
+            $(this).css({
+                            width: this.width*scale,
+                            height: this.height*scale
+                        });
+
+            container.scrollLeft = ($(container).width() / -2 ) + clickX * scale;
+            container.scrollTop = ($(container).height() / -2 ) + clickY * scale;
+        }
+    );
 
 });
